@@ -1,0 +1,551 @@
+<html lang="en">
+
+<head>
+   
+<style>
+*;
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+}
+.main-title{
+  color:#000;
+  margin-top: 10px;
+  padding-top: 60px;
+}
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  color: #117964;
+  transition: color 0.3s ease-in-out;
+}
+
+
+
+.showcase-area {
+  height: 50vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.144),
+      rgba(0, 2, 9, 0)
+    ),
+    url("https://i.postimg.cc/wT3TQS3V/header-image2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.6rem;
+}
+
+.main-title {
+  text-transform: uppercase;
+  margin-top: 1.5em;
+}
+
+
+#about {
+  padding: 50px 0;
+  background: #f5f5f7;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about h2 {
+  font-size: 2.3rem;
+}
+
+#about p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+#about .small {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.about-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: translateX(150%);
+  animation: about-img-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-img-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+  transform: translate(-150%);
+  animation: about-text-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+
+.about-img img {
+  display: block;
+  height: 400px;
+  max-width: 100%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+}
+
+
+
+#food {
+  padding: 5rem 0 10rem 0;
+}
+
+#food h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.food-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.food-container img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img-container {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.img-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  text-align: center;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.img-content h3 {
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.img-content a {
+  font-size: 1.2rem;
+}
+
+.img-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.871);
+  opacity: 0;
+  z-index: 1;
+
+  transform: scaleY(0);
+  transform-origin: 100% 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.img-container:hover::after {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.img-container:hover .img-content {
+  opacity: 1;
+  top: 40%;
+}
+
+
+
+.food-menu-heading {
+  text-align: center;
+  font-size: 3.4rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.food-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0px 30px 0px;
+}
+
+.food-menu-container img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.food-menu-item {
+  display: flex;
+  flex: 1 1 600px;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+
+.food-description {
+  margin: auto 1.5rem;
+}
+
+.font-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #444;
+}
+
+.food-description p {
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.food-description .food-price {
+  color: #117964;
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  background-color: #e5e5e5;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+
+.right {
+  background-color: #e5e5e5;
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+/* CSS for the logo */
+    .logo {
+      float: left;
+      padding: 10px;
+    }
+    
+    .logo img {
+      height: 60px;
+    }
+body {
+ font-size:28px; font-family:geneva;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: right;
+  font-size:18px;
+  color: white;
+  text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 18px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* CSS for the footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+</style>
+</head>
+<body style="background-color:#ffd9cc;">
+
+<div class="navbar">
+<li class="logo"><img src="C:\xampp\htdocs\website\images\logo2.jpg" alt="Logo"></li>
+<a href="login.html">Login</a>
+
+<a href="testimonial.html">Testimonial</a>
+
+   <div class="dropdown">
+    <button class="dropbtn">Menue 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="starters.html">Starters</a>
+      <a href="maincourse1.html">Maincourse</a>
+      <a href="dessert.html">Dessert</a>
+<a href="Beverages.html">Beverages</a>
+    </div>
+  </div> 
+<div class="dropdown">
+    <button class="dropbtn">Category 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="italian.html">Italian</a>
+      <a href="chinese.html">Chinese</a>
+      <a href="mexican.html">Mexican</a>
+<a href="indian.html">Indian</a>
+<a href="panasian.html">Panasian</a>
+<a href="greek.html">Greek</a>
+    </div>
+  </div> 
+  
+ 
+
+<a href="aboutus.html">About Us</a>
+</div>
+<section id="food-menu">
+        <h1 class="food-menu-heading" style="color:DarkGreen;"> What we have for you ?</h1>
+            <h2 style=" font-size:30px ;color:DarkGreen; text-align:center;" >BEVERAGES!</h2>
+        <div class="food-menu-container container">
+            <div class="food-menu-item">
+                <div class="food-img">
+                    <img src="C:\xampp\htdocs\website\images\mojito.jpg">
+                </div>
+                <div class="food-description">
+                    <h3 class="food-titile" style="font-size:32px; font-family:geneva;">Virgin_Mojito</h3>
+                    
+                    <p class="food-price">Price: &#8377; 200/pcs</p>
+                </div>
+            </div>
+<div class="food-menu-item">
+                <div class="food-img">
+                    <img src="C:\xampp\htdocs\website\images\shake.jpg">
+                </div>
+                <div class="food-description">
+                    <h3 class="food-titile" style="font-size:32px; font-family:geneva;">Brownie_Shake</h3>
+                    
+                    <p class="food-price">Price: &#8377; 175/pcs</p>
+                </div>
+            </div>
+<div class="food-menu-item">
+                <div class="food-img">
+                    <img src="C:\xampp\htdocs\website\images\colada.jpg">
+                </div>
+                <div class="food-description">
+                    <h3 class="food-titile" style="font-size:32px; font-family:geneva;">Pina_Colada</h3>
+                    
+
+                    <p class="food-price">Price: &#8377; 255</p>
+                </div>
+            </div>
+<div class="food-menu-item">
+                <div class="food-img">
+                    <img src="C:\xampp\htdocs\website\images\bubble.jpg">
+                </div>
+                <div class="food-description">
+                    <h3 class="food-titile" style="font-size:32px; font-family:geneva;">Bubble_Tea</h3>
+                    
+
+                    <p class="food-price">Price: &#8377; 350</p>
+                </div>
+            </div>
+<div class="food-menu-item">
+                <div class="food-img">
+                    <img src="C:\xampp\htdocs\website\images\coffee.jpg">
+                </div>
+                <div class="food-description">
+                    <h3 class="food-titile" style="font-size:32px; font-family:geneva;">Cold_Coffee_Icecream</h3>
+                    
+
+                    <p class="food-price">Price: &#8377; 200</p>
+                </div>
+            </div>
+<div class="food-menu-item">
+                <div class="food-img">
+                    <img src="C:\xampp\htdocs\website\images\fresh.jpg">
+                </div>
+                <div class="food-description">
+                    <h3 class="food-titile" style="font-size:32px; font-family:geneva;">Fresh_Juices</h3>
+                    
+
+                    <p class="food-price">Price: &#8377;150</p>
+                </div>
+            </div>
+</section>
+<!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      
+          <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/?lang=en-in"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+      <a href="tel:+91-8879067589">Contact No : +91-8879067589</a><br>
+      <a href="#branches"> Branches : </a>
+          <a href="#branches">Jaynagar</a>
+      <a href="#branches">J.P. Nagar</a>
+      <a href="#branches">HSR Layout</a>
+      <a href="#branches">Yelahanka</a>
+          
+
+    </div>
+  </footer>
+</body>
+</html>

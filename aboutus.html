@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/* CSS for the logo */
+    .logo {
+      float: left;
+      padding: 10px;
+    }
+    
+    .logo img {
+      height: 60px;
+    }
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: right;
+  font-size:18px;
+  color: white;
+  text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 18px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* CSS for the footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+</style>
+</head>
+<body style="background-color:#ffd9cc;">
+
+<div class="navbar">
+<li class="logo"><img src="C:\xampp\htdocs\website\images\logo2.jpg" alt="Logo"></li>
+<a href="login.html">Login</a>
+
+
+
+<a href="testimonial.html">Testimonial</a>
+
+   <div class="dropdown">
+    <button class="dropbtn">Menue 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="starters.html">Starters</a>
+      <a href="maincourse1.html">Maincourse</a>
+      <a href="dessert.html">Dessert</a>
+<a href="Beverages.html">Beverages</a>
+    </div>
+  </div> 
+<div class="dropdown">
+    <button class="dropbtn">Category 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="italian.html">Italian</a>
+      <a href="chinese.html">Chinese</a>
+      <a href="mexican.html">Mexican</a>
+<a href="indian.html">Indian</a>
+<a href="panasian.html">Panasian</a>
+<a href="greek.html">Greek</a>
+    </div>
+  </div> 
+<a href="aboutus.html">About us</a>
+</div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="slideshow-container">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="C:\xampp\htdocs\website\images\s2.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="C:\xampp\htdocs\website\images\ss3.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="C:\xampp\htdocs\website\images\ss4.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<div class="section">
+    <h2 style= "text-align:center; font-size:28px; font-family:geneva"><i>About the Restaurant</i></h2>
+    <p style="font-size:22px; font-family:geneva; color:black; line-height:0.8cm; border-style:solid; border-color:black; border-width:3px;"><i>Welcome to Stories, where culinary excellence meets warm hospitality. At our restaurant, we strive to create a 
+memorable dining experience that tantalizes your taste buds and leaves you craving for more. With a passion for exceptional flavors and attention to detail, our talented chefs craft exquisite dishes using the finest ingredients sourced locally and globally. 
+From savoring classic favorites to indulging in innovative culinary creations, our diverse menu caters to every palate. Whether you're seeking an intimate dinner for two or celebrating a special occasion with a larger group, our friendly and knowledgeable
+ staff are committed to providing impeccable service that surpasses your expectations. <br>Join us at Stories, where food, ambiance, and impeccable service come together to create an unforgettable journey of gastronomic delights.</i></p>
+  </div>
+  
+
+  
+<!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      
+          <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/?lang=en-in"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+	    <a href="tel:+91-8879067589">Contact No : +91-8879067589</a><br>
+	    <a href="#branches"> Branches : </a>
+          <a href="#branches">Jaynagar</a>
+	    <a href="#branches">J.P. Nagar</a>
+	    <a href="#branches">HSR Layout</a>
+	    <a href="#branches">Yelahanka</a>
+     	    
+
+    </div>
+  </footer>
+
+</body>
+</html>

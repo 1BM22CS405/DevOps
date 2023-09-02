@@ -1,0 +1,21 @@
+.values-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value {
+  text-align: center;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.value img {
+  width: 100%;
+  max-width: 200px; /* Adjust the maximum width of the image */
+  height: auto;
+}
+
+.value p {
+  margin-top: 10px;
+}
