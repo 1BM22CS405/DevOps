@@ -22,7 +22,7 @@ jobs:
         run: docker build -t mywebsite .
         
       - name: Tag Docker Image
-        run: docker tag my-website:latest ${{secrets.DOCKER_USERNAME}}/mywebsite:latest
+        run: docker tag my-website:latest ${{secrets.DOCKER_USERNAME}}/my-website:latest
       
       - name: Push Docker Image
         run: docker push ${{secrets.DOCKER_USERNAME}}/mywebsite:latest
