@@ -20,13 +20,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       
       - name: Build Docker Image
-        run: docker build -t my-website .
+        run: docker build -t stories .
         
       - name: Tag Docker Image
-        run: docker tag my-website:latest ${{secrets.DOCKER_USERNAME}}/stories:latest
+        run: docker tag stories:latest ${{secrets.DOCKER_USERNAME}}/stories:latest
       
       - name: Push Docker Image
         run: docker push ${{secrets.DOCKER_USERNAME}}/stories:latest
-
-      - name: Run Docker Container
-        run: docker run -d -p 80:80 ${{secrets.DOCKER_USERNAME}}/stories:latest
