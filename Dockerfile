@@ -18,6 +18,8 @@ COPY . /var/www/html
 # Set the working directory
 WORKDIR /var/www/html
 
+# Install PHP extensions
 RUN docker-php-ext-install mysqli pdo pdo_mysql
-COPY  code/ /var/www/html/
-EXPOSE 80
+
+# Expose port 80
+EXPOSE 80
