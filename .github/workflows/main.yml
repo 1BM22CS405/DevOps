@@ -28,4 +28,4 @@ jobs:
         run: docker push ${{secrets.DOCKER_USERNAME}}/my-website:latest
 
       - name: Run Docker Container
-        run: docker run -d -p 80:80 ${{secrets.DOCKER_USERNAME}}/mywebsite:latest
+        run: docker run -d -p 80:80 ${{secrets.DOCKER_USERNAME}}/my-website:latest
