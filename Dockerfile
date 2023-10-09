@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
 
 # Enable Apache rewrite module
 RUN a2enmod rewrite
+//
 
 # Set the document root to Laravel's public directory
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
