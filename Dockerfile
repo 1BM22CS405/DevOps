@@ -1,25 +1,21 @@
+# Use an official PHP with Apache base image
 FROM php:7.4-apache
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y \
-    libzip-dev \
-    unzip \
-    && docker-php-ext-install zip pdo_mysql
-
-# Enable Apache rewrite module
-RUN a2enmod rewrite
-
-# Set the document root to Laravel's public directory
-ENV APACHE_DOCUMENT_ROOT /var/www/html/public
-
-# Copy the application files to the container
-COPY . /var/www/html
-
-# Set the working directory
+# Set the working directory inside the container
 WORKDIR /var/www/html
 
-# Install PHP extensions
-RUN docker-php-ext-install mysqli pdo pdo_mysql
+# Install Git to clone the repository
+RUN apt-get update && \
+    apt-get install -y git
 
-# Expose port 80
+# Clone the GitHub repository into the container (if needed)
+# RUN git clone https://github.com/1BM22CS405/DevOps.git .
+
+# Copy the entire contents of your local project into the container
+COPY . .
+
+# Expose port 80 for the Apache web server
 EXPOSE 80
+
+# Define the command to start the Apache web server
+CMD ["apache2-foreground"]
