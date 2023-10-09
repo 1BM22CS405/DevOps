@@ -1,0 +1,13 @@
+version: '3'
+services:
+  laravel-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: laravel-app
+    container_name: my-laravel-app
+    volumes:
+      - ./public:/var/www/html/public
+    ports:
+      - "8080:80"
+    restart: always
