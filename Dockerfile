@@ -1,25 +1,25 @@
-# Stage 1: Clone the GitHub repository into a temporary image
-FROM ubuntu AS clone
-
-# Install Git to clone the repository
-RUN apt-get update && \
-    apt-get install -y git
-
-# Clone the GitHub repository into the container
-WORKDIR /app
-RUN git clone https://github.com/1BM22CS405/DevOps.git .
-
-# Stage 2: Create the final image
 FROM php:7.4-apache
 
-# Set the working directory inside the container
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    libzip-dev \
+    unzip \
+    && docker-php-ext-install zip pdo_mysql
+
+# Enable Apache rewrite module
+RUN a2enmod rewrite
+
+# Set the document root to Laravel's public directory
+ENV APACHE_DOCUMENT_ROOT /var/www/html/public
+
+# Copy the application files to the container
+COPY . /var/www/html
+
+# Set the working directory
 WORKDIR /var/www/html
 
-# Copy the contents of the temporary image into the final image
-COPY --from=clone /app .
+# Install PHP extensions
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 
-# Expose port 80 for the Apache web server
+# Expose port 80
 EXPOSE 80
-
-# Define the command to start the Apache web server
-CMD ["apache2-foreground"]
