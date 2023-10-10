@@ -1,0 +1,22 @@
+version: '3'
+services:
+  apache-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-apache-container
+    ports:
+      - "8080:80"
+    depends_on:
+      - database
+    environment:
+      APACHE_LOG_DIR: /var/log/apache2
+
+  database:
+    image: mysql:5.7
+    container_name: my-mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_DATABASE: your_database
+      MYSQL_USER: your_username
+      MYSQL_PASSWORD: your_password
